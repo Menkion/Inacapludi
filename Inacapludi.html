@@ -1,76 +1,163 @@
 <!DOCTYPE html>
 <html lang="es-CL">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Club Oficial de juegos de mesa y de rol">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <Title>INACAPludi</Title>
-        <link rel="preconnect" href="https://images.unsplash.com/photo-1529209076408-5a115ec9f1c6?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <style>
-            body {
-                font-family: "Caveat", cursive;
-                font-optical-sizing: auto;
-                font-style: normal;
-            }
-            h1, h2 {
-                font-family: "Permanent Marker", cursive;
-                font-optical-sizing: auto;
-                font-weight: 400;
-                font-style: normal;
-            }
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Club Oficial de juegos de mesa y de rol">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>INACAPludi</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .imagen {
+            width: 1500px;
+            height: auto;
             
-        </style>
-    </head>
-    <body>
-        <div id="form">
-            <form id="call2action" onsubmit="return sendForm(this);">
-                <div>
-                    <span><label for="form_name">Tu nombre:</label></span>
-                    <span><input type="text" id="form_name" name="form_name"/></span>
-                </div>
-                <div>
-                    <span><label for="form_email">Tu e-mail:</label></span>
-                    <span><input type="text" id="form_email" name="form_email"/></span>
-                </div>
-                <div>
-                    <span><label for="form_game">Me gusta jugar:</label></span>
-                    <span>
-                        <select id="form_game" name="form_game">
-                            <option value="">Selecciona el tipo de juego</option>
-                            <option value="de Cartas">Juegos de Cartas</option>
-                            <option value="Cooperativos">Juegos Cooperativos</option>
-                            <option value="Temáticos">Juegos Temáticos</option>
-                            <option value="de Estrategia">Juegos de Estrategia</option>
-                            <option value="de Aventura">Juegos de Aventura</option>
-                            <option value="de Acertijos">Juegos de Acertijos</option>
-                            <option value="Tradicionales">Juegos Tradicionales</option>
-                            <option value="de Rol">Juegos de Rol</option>
-                        </select>
-                    </span>
-                </div>
-                <div>
-                    <span><button type="submit" name="submit">Enviar</button></span>
-                </div>
-            </form>    
-        </div>
-        <div id="gift" style="display: none;">
-            <p>
-                Gracias por enviarnos tus datos, <span id="contact_name" style="font-weight: bold;"></span>. 
-                Notamos que te apasionan los Juegos <span id="contact_game" style="font-weight: bold;"></span>. 
-                Nos contactaremos contigo a la brevedad usando tu dirección <span id="contact_email" style="font-weight: bold;"></span>.
-            </p>
-            <p>
-                Y no olvides que tenemos para tí un regalo por tu interés: 
-            </p>
-            <h2>
-                <a href="https://quejuegosdemesa.com/instrucciones/" target="_blank">
-                    Descarga aquí instrucciones de juegos de mesa
-                </a>
-    </body>
-</html>
-prueba 12 de cambios
-prueba 12 de cambios
-prueba 12 de cambios
-prueba 12 de cambios
-prueba 12 de cambios
 
+        }
+        .intercalado {
+            background-image: linear-gradient(to right, red 50%, white 50%);
+            background-size: 200% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: intercalado 3s infinite linear;
+        }
+        @keyframes intercalado {
+            0% {
+                background-position: 0% 0;
+            }
+            25% {
+                background-position: 100% 0;
+            }
+            50% {
+                background-position: 0% 0;
+            }
+            75% {
+                background-position: -100% 0;
+            }
+            100% {
+                background-position: 0% 0;
+            }
+
+        }
+        .container {
+            position: relative;
+            height: 1000px;
+            overflow: hidden;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fondo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .texto {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            z-index: 1;
+        }
+        #form {
+            position: absolute;
+            top: 1000%;
+            left: 20%;
+            z-index: 2;
+            color: white;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/jesus-eca-6B-IevAR_AE-unsplash.jpg?raw=true" width="100%" alt="Fondo de la página"class="fondo">
+        <div class="texto">
+            <h1 class="intercalado">CLUB OFICIAL: <br> InacapLudi <br> Juegos de mesa y de Rol</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="item">
+                <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/joshua-hoehne-c-jTL24e50c-unsplash.jpg?raw=true" width="500px" alt="Imagen 1" class="imagen">
+                <div class="texto">Texto sobre la imagen 1</div>
+            </div>
+    <div id="form">
+        <form id="call2action" onsubmit="return sendForm(this);">
+            <div>
+                <span><label for="form_name">Tu nombre:</label></span>
+                <span><input type="text" id="form_name" name="form_name"/></span>
+            </div>
+            <div>
+                <span><label for="form_email">Tu e-mail:</label></span>
+                <span><input type="text" id="form_email" name="form_email"/></span>
+            </div>
+            <div>
+                <span><label for="form_game">Me gusta jugar:</label></span>
+                <span>
+                    <select id="form_game" name="form_game">
+                        <option value="">Selecciona el tipo de juego</option>
+                        <option value="de Cartas">Juegos de Cartas</option>
+                        <option value="Cooperativos">Juegos Cooperativos</option>
+                        <option value="Temáticos">Juegos Temáticos</option>
+                        <option value="de Estrategia">Juegos de Estrategia</option>
+                        <option value="de Aventura">Juegos de Aventura</option>
+                        <option value="de Acertijos">Juegos de Acertijos</option>
+                        <option value="Tradicionales">Juegos Tradicionales</option>
+                        <option value="de Rol">Juegos de Rol</option>
+                    </select>
+                </span>
+            </div>
+            <div>
+                <span><button type="submit" name="submit">Enviar</button></span>
+            </div>
+        </form>    
+    </div>
+    <div id="gift" style="display: none;">
+        <p>
+            Gracias por enviarnos tus datos, <span id="contact_name" style="font-weight: bold;"></span>. 
+            Notamos que te apasionan los Juegos <span id="contact_game" style="font-weight: bold;"></span>. 
+            Nos contactaremos contigo a la brevedad usando tu dirección <span id="contact_email" style="font-weight: bold;"></span>.
+        </p>
+        <p>
+            Y no olvides que tenemos para tí un regalo por tu interés: 
+        </p>
+        <h2>
+            <a href="https://quejuegosdemesa.com/instrucciones/" target="_blank">
+                Descarga aquí instrucciones de juegos de mesa
+            </a>
+        </h2>
+    </div>
+    <script>
+        document.addEventListener('scroll', function() {
+            var scrollY = window.scrollY;
+            var items = document.querySelectorAll('.item');
+            var fondo = document.querySelector('.fondo');
+        
+            for (var i = 0; i < items.length; i++) {
+                var item = items[i];
+        
+                var opacity = Math.min(scrollY / 500, 1);
+                item.style.opacity = opacity;
+            }
+        
+            fondo.style.opacity = 1 - Math.min(scrollY / 500, 1);
+        });
+        </script>
+        
+        
+        
+        
+</body>
+</html>
