@@ -13,10 +13,18 @@
             padding: 0;
         }
         .imagen {
-            width: 1500px;
+            width: 100%;
             height: auto;
             
 
+        }
+        #logo {
+        position: absolute; /* Posición absoluta */
+        top: 20px; /* Desde la parte superior */
+        left: 20px; /* Desde la parte izquierda */
+        width: 200px; /* Ancho del logo */
+        height: auto; /* Altura automática para mantener la proporción */
+        z-index: 999; /* Z-index para asegurar que esté por encima de otros elementos */
         }
         .intercalado {
             background-image: linear-gradient(to right, red 50%, white 50%);
@@ -42,7 +50,7 @@
             100% {
                 background-position: 0% 0;
             }
-
+            
         }
         .container {
             position: relative;
@@ -63,6 +71,28 @@
 
         .texto {
             position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            z-index: 1;
+        }
+        .texto2 {
+            position: absolute;
+            top: 60%;
+            left: 70%;
+            transform: translate(-70%, -70%);
+            text-align: left;
+            color: white;
+            font-size: 24px;
+            z-index: 1;
+            width: 90%;
+            padding: 50px;
+        }
+        .texto3 {
+            position: absolute;
             top: 20%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -73,25 +103,150 @@
         }
         #form {
             position: absolute;
-            top: 1000%;
-            left: 20%;
+            top: 80%;
+            left: 30%;
             z-index: 2;
             color: white;
             font-size: 24px;
         }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .icon {
+            position: relative;
+            width: 100px; /* Tamaño del icono */
+            height: 100px;
+            margin: 20px; /* Espacio entre iconos */
+            overflow: hidden; /* Ocultar desbordamiento del texto */
+        }
+        .icon img {
+            width: 100%;
+            height: 100%;
+        }
+        .icon-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #fff; /* Grosor y color del marco */
+            box-sizing: border-box; /* Incluir el grosor del borde en las dimensiones */
+            opacity: 0; /* Ocultar el marco por defecto */
+            transition: opacity 0.3s ease; /* Transición suave de la opacidad */
+        }
+        .icon-text {
+            position: absolute;
+            top: 0; /* Alinea el texto en la parte superior */
+            left: 0;
+            width: 100%; /* Ocupa todo el ancho del icono */
+            background-color: rgba(0, 0, 0, 0.7); /* Color de fondo del texto */
+            color: #fff; /* Color del texto */
+            padding: 10px; /* Espaciado interno del texto */
+            box-sizing: border-box;
+            opacity: 0; /* Ocultar el texto por defecto */
+            transition: opacity 0.3s ease; /* Transición suave de la opacidad */
+            text-align: center; /* Alinea el texto al centro */
+            font-size: 14px; /* Tamaño del texto */
+        }
+        .text-box {
+            position: absolute;
+            top: 100%; /* Alinea el recuadro de texto debajo del icono */
+            left: 50%; /* Centra el recuadro de texto horizontalmente */
+            transform: translateX(-50%); /* Centra el recuadro de texto horizontalmente */
+            background-color: rgba(0, 0, 0, 0.7); /* Color de fondo del recuadro de texto */
+            color: #fff; /* Color del texto */
+            padding: 10px; /* Espaciado interno del recuadro de texto */
+            box-sizing: border-box;
+            opacity: 0; /* Oculta el recuadro de texto por defecto */
+            transition: opacity 0.3s ease; /* Transición suave de la opacidad */
+            text-align: center; /* Alinea el texto al centro */
+            font-size: 14px; /* Tamaño del texto */
+            width: 120px; /* Ancho del recuadro de texto */
+            pointer-events: none; /* Ignora eventos de ratón para que el recuadro de texto no interfiera con el clic en los iconos */
+        }
+        .text-box.active {
+            opacity: 1;
+        }
+        .icon:hover .icon-frame,
+        .icon:hover .icon-text {
+            opacity: 1; /* Mostrar el marco y el texto al pasar el mouse */
+        }
     </style>
 </head>
 <body>
+    <header>
+        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/banner_1683135424563.png?raw=true" alt="Logo de mi página" id="logo">
+    </header>
     <div class="container">
-        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/jesus-eca-6B-IevAR_AE-unsplash.jpg?raw=true" width="100%" alt="Fondo de la página"class="fondo">
+        <img class="item" src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/jesus-eca-6B-IevAR_AE-unsplash.jpg?raw=true" width="100%" alt="Fondo de la página"class="fondo">
         <div class="texto">
-            <h1 class="intercalado">CLUB OFICIAL: <br> InacapLudi <br> Juegos de mesa y de Rol</h1>
+            <h1 class="intercalado">CLUB OFICIAL: <br> InacapLudi <br> Juegos de mesa y de Rol</div>
+                <h2 class="texto2">Dentro de nuestras actividades principales, contamos con:  <br>
+
+                    ☼ Espacios en cada una de las sedes para realizar partidas, de cualquier tipo de juego, en horarios hábiles. <br><br>
+                    ☼ Ludoteca, lugar donde hemos podido reunir diferentes juegos y libros, que cada socio puede solicitar para usarse en la sede. <br> <br>
+                    ☼ Eventos por sede en donde podemos reunirnos como club y poder jugar libremente durante una jornada extraprogramática. <br><br>
+                    ☼ Eventos inter-sedes, ya sea regionales o nacionales, en donde contamos con la participación de cada uno de los clubes (un evento al año que comienza el viernes y termina el sábado por la noche). <br><br>
+                    ☼ Charlas y talleres para toda la comunidad inacapina para que nos conozcan y aprendan estas prácticas sociales.<br><br>
+                    En los eventos tanto locales como intersede, se invita a la comunidad inacapina a participar a través de una “entrada” que le da derecho a una cantidad de partidas gratuitas. Además, hay tiendas invitadas en donde se ofrecen productos asociados a juegos de mesa y de rol. <br><br>
+                    
+                    Somos un espacio inclusivo y diverso donde todos son bienvenidos a sumergirse en la emoción y la camaradería que los juegos de mesa y de rol pueden ofrecer. </h2>
             </div>
         </div>
         <div class="container">
             <div class="item">
-                <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/joshua-hoehne-c-jTL24e50c-unsplash.jpg?raw=true" width="500px" alt="Imagen 1" class="imagen">
-                <div class="texto">Texto sobre la imagen 1</div>
+                <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/joshua-hoehne-c-jTL24e50c-unsplash.jpg?raw=true" width="500px" alt="Fondo de la página 2" class="fondo">
+                <div class="texto3">Algunas de nuestras actividades de juegos son:</div>
+                <div class="icon-container">
+                    <!-- Icono 1 Juegos de Cartas -->
+                    <div class="icon" onclick="showTextBox(1)">
+                        <div class="icon-frame"></div>
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/competitive_956567.png?raw=true" alt="Icono 1">
+                        <div class="icon-text">Juegos de Cartas</div>
+                    </div>
+            
+                    <!-- Icono 2 Juegos Cooperativos -->
+                    <div class="icon" onclick="showTextBox(2)">
+                        <div class="icon-frame"></div>
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/cooperation_8095513.png?raw=true" alt="Icono 2">
+                        <div class="icon-text">Juegos Cooperativos</div>
+                    </div>
+                    <!-- Icono 3 Juegos Temáticos -->
+                    <div class="icon" onclick="showTextBox(3)">
+                        <div class="icon-frame"></div>
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/dance_3813737.png?raw=true" alt="Icono 3">
+                        <div class="icon-text">Juegos Temáticos</div>
+                    </div>
+                    <!-- Icono 4 Juegos de Estrategia -->
+                    <div class="icon" onclick="showTextBox(4)">
+                        <div class="icon-frame"></div>
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/farsa.png?raw=true" alt="Icono 4">
+                        <div class="icon-text">Juegos de Estrategia</div>
+                    </div>
+                    <!-- Icono 5 Juegos de Aventura -->
+                    <div class="icon" onclick="showTextBox(5)">
+                        <div class="icon-frame"></div>
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/juego-de-aventura.png?raw=true" alt="Icono 5">
+                        <div class="icon-text">Juegos de Aventura</div>
+                    </div>
+                    <!-- Icono 6 Juegos de Acertijos -->
+                    <div class="icon"onclick="showTextBox(6)">
+                        <div class="icon-frame"></div>
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/juego-infantil-tradicional.png?raw=true" alt="Icono 6">
+                        <div class="icon-text">Juegos de Acertijos</div>
+                    </div>
+                    <!-- Icono 7 Juegos Tradicionales -->
+                    <div class="icon" onclick="showTextBox(7)">
+                        <div class="icon-frame"></div>
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/mapa-del-juego.png?raw=true" alt="Icono 7">
+                        <div class="icon-text">Juegos Tradicionales</div>
+                    </div>
+                    <div id="text-box-1" class="text-box">lg.fhdkjhbnslfbkgjnsrlkbjhnsgdflkjsfgdnblsfgdkjbngsflbkjhsgfnblksjfghbnlsfgjkbhnsfglb</div>
+                    
             </div>
     <div id="form">
         <form id="call2action" onsubmit="return sendForm(this);">
@@ -143,21 +298,35 @@
         document.addEventListener('scroll', function() {
             var scrollY = window.scrollY;
             var items = document.querySelectorAll('.item');
-            var fondo = document.querySelector('.fondo');
-        
+
             for (var i = 0; i < items.length; i++) {
                 var item = items[i];
-        
-                var opacity = Math.min(scrollY / 500, 1);
+                var rect = item.getBoundingClientRect(); // Obtener la posición del elemento respecto a la ventana
+
+                // Calcular la opacidad en función de la posición del elemento en la ventana
+                var distanceFromTop = rect.top;
+                var windowHeight = window.innerHeight;
+                var opacity = 1 - Math.max(0, Math.min(1, (distanceFromTop - windowHeight * 0.25) / (windowHeight * 0.5)));
+
+                // Aplicar la opacidad al elemento
                 item.style.opacity = opacity;
             }
-        
-            fondo.style.opacity = 1 - Math.min(scrollY / 500, 1);
         });
-        </script>
+    </script>
+<script>
+    // Función para mostrar el recuadro de texto correspondiente al hacer clic en un icono
+    function showTextBox(iconNumber) {
+        // Oculta todos los recuadros de texto
+        document.querySelectorAll('.text-box').forEach(function(element) {
+            element.classList.remove('active');
+        });
         
-        
-        
-        
+        // Muestra el recuadro de texto correspondiente al icono clicado
+        var textBox = document.getElementById('text-box-' + iconNumber);
+        if (textBox) {
+            textBox.classList.add('active');
+        }
+    }
+</script>    
 </body>
 </html>
