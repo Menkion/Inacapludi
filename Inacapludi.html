@@ -100,14 +100,36 @@
             color: white;
             font-size: 24px;
             z-index: 1;
+            text-shadow: -1px -1px 0 black,  
+                         1px -1px 0 black,
+                        -1px 1px 0 black,
+                         1px 1px 0 black;
+        }
+        .texto4 {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            z-index: 1;
+            text-shadow: -1px -1px 0 black,  
+                         1px -1px 0 black,
+                        -1px 1px 0 black,
+                         1px 1px 0 black;
         }
         #form {
             position: absolute;
-            top: 80%;
+            top: 85%;
             left: 30%;
             z-index: 2;
             color: white;
             font-size: 24px;
+            text-shadow: -1px -1px 0 black,  
+                         1px -1px 0 black,
+                        -1px 1px 0 black,
+                         1px 1px 0 black;
         }
         .icon-container {
             display: flex;
@@ -154,7 +176,7 @@
         }
         .text-box {
             position: absolute;
-            top: 100%; /* Alinea el recuadro de texto debajo del icono */
+            top: 25%; /* Alinea el recuadro de texto debajo del icono */
             left: 50%; /* Centra el recuadro de texto horizontalmente */
             transform: translateX(-50%); /* Centra el recuadro de texto horizontalmente */
             background-color: rgba(0, 0, 0, 0.7); /* Color de fondo del recuadro de texto */
@@ -164,8 +186,8 @@
             opacity: 0; /* Oculta el recuadro de texto por defecto */
             transition: opacity 0.3s ease; /* Transición suave de la opacidad */
             text-align: center; /* Alinea el texto al centro */
-            font-size: 14px; /* Tamaño del texto */
-            width: 120px; /* Ancho del recuadro de texto */
+            font-size: 18px; /* Tamaño del texto */
+            width: 1000px; /* Ancho del recuadro de texto */
             pointer-events: none; /* Ignora eventos de ratón para que el recuadro de texto no interfiera con el clic en los iconos */
         }
         .text-box.active {
@@ -173,7 +195,7 @@
         }
         .icon:hover .icon-frame,
         .icon:hover .icon-text {
-            opacity: 1; /* Mostrar el marco y el texto al pasar el mouse */
+            opacity: 1;
         }
     </style>
 </head>
@@ -203,51 +225,107 @@
                 <div class="texto3">Algunas de nuestras actividades de juegos son:</div>
                 <div class="icon-container">
                     <!-- Icono 1 Juegos de Cartas -->
-                    <div class="icon" onclick="showTextBox(1)">
+                    <div class="icon"onclick="showTextBox(1)">
                         <div class="icon-frame"></div>
                         <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/competitive_956567.png?raw=true" alt="Icono 1">
                         <div class="icon-text">Juegos de Cartas</div>
                     </div>
+                    <div id="text-box-1" class="text-box">
+                        ☼ Póker: Este es uno de los juegos de cartas más populares del mundo, con muchas variantes como Texas Hold'em, Omaha, y Seven-Card Stud. Los jugadores hacen apuestas basadas en la fuerza de sus manos de cinco cartas.<br>
+                        ☼ Bridge: Un juego de cartas de contrato en el que dos parejas compiten para ganar trucos. El Bridge es un juego de estrategia y comunicación intensa.<br>
+                        ☼ Rummy: Un grupo de juegos de cartas que incluyen Gin Rummy, Rummy 500, y otros. El objetivo es formar combinaciones de cartas, como tríos o escaleras, para deshacerse de todas las cartas en la mano.<br>
+                        ☼ Solitario: Un juego de cartas para un solo jugador donde el objetivo es ordenar las cartas en pilas según el palo y en orden ascendente.<br>
+                        ☼ Blackjack: Un juego de cartas de casino donde los jugadores compiten contra el crupier. El objetivo es obtener una mano cuyo valor sea lo más cercano posible a 21 sin pasarse.<br>
+                        ☼ Cribbage: Un juego de cartas tradicionalmente británico que implica formar combinaciones de cartas para sumar puntos, especialmente en la fase de "crib" (descarte).<br>
+                        ☼ Euchre: Un juego de cartas de bazas en equipos donde los jugadores tratan de ganar un número específico de trucos y evitar ciertas cartas que pueden cambiar las reglas.<br>
+                        ☼ Whist: Un juego de cartas antiguo que es el precursor del Bridge. Se juega en parejas y el objetivo es ganar el mayor número posible de trucos.<br>
+                    </div>
             
                     <!-- Icono 2 Juegos Cooperativos -->
-                    <div class="icon" onclick="showTextBox(2)">
+                    <div class="icon"onclick="showTextBox(2)">
                         <div class="icon-frame"></div>
                         <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/cooperation_8095513.png?raw=true" alt="Icono 2">
                         <div class="icon-text">Juegos Cooperativos</div>
                     </div>
+                    <div id="text-box-2" class="text-box">
+                        ☼ Pandemic: En este juego, los jugadores trabajan juntos como miembros de un equipo especializado para detener brotes de enfermedades mortales en todo el mundo.<br>
+                        ☼ Ghost Stories: Los jugadores asumen el papel de monjes taoístas defendiendo un pueblo de un ejército de fantasmas malignos.<br>
+                        ☼ Forbidden Island / Forbidden Desert: Ambos juegos son del mismo diseñador de Pandemic. En Forbidden Island, los jugadores deben recuperar tesoros y escapar antes de que una isla se hunda. En Forbidden Desert, los jugadores trabajan juntos para encontrar partes de un barco perdido en el desierto antes de ser enterrados por la tormenta de arena.<br>
+                        ☼ Hanabi: Los jugadores intentan crear un espectáculo de fuegos artificiales perfecto, pero hay una complicación: no pueden ver sus propias cartas y deben confiar en las pistas que les dan sus compañeros de equipo.<br>
+                        ☼ Gloomhaven: Este es un juego de rol táctico en el que los jugadores asumen el papel de mercenarios en un mundo de fantasía en constante cambio, enfrentándose a monstruos y tomando decisiones que afectan al mundo.<br>
+                        ☼ Arkham Horror: The Card Game: Los jugadores asumen el papel de investigadores en el universo Lovecraftiano, trabajando juntos para resolver misterios y enfrentarse a horrores sobrenaturales.<br>
+                        ☼ Spirit Island: Los jugadores son espíritus poderosos que protegen una isla de las incursiones coloniales. Deben coordinar sus poderes para expulsar a los invasores y preservar la isla.<br>
+                        ☼ Robinson Crusoe: Aventuras en la Isla Maldita: Los jugadores trabajan juntos para sobrevivir en una isla desierta, construyendo refugios, cazando, explorando y enfrentándose a desafíos naturales y sobrenaturales.<br>
+                    </div>
                     <!-- Icono 3 Juegos Temáticos -->
-                    <div class="icon" onclick="showTextBox(3)">
+                    <div class="icon"onclick="showTextBox(3)">
                         <div class="icon-frame"></div>
                         <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/dance_3813737.png?raw=true" alt="Icono 3">
                         <div class="icon-text">Juegos Temáticos</div>
                     </div>
+                    <div id="text-box-3" class="text-box">
+                        ☼ Catan: Un juego de estrategia donde los jugadores recolectan recursos para construir y expandir sus colonias en una isla ficticia. La temática gira en torno a la colonización de un territorio desconocido.<br>
+                        ☼ Ticket to Ride: Ambientado en la época dorada de los ferrocarriles en América del Norte, los jugadores compiten por construir rutas ferroviarias entre ciudades para conectar destinos y completar objetivos.<br>
+                        ☼ Arkham Horror: Basado en los escritos de H.P. Lovecraft, los jugadores asumen el papel de investigadores que intentan detener la invasión de horrores cósmicos en la ciudad de Arkham. Es un juego cooperativo de horror y supervivencia.<br>
+                        ☼ Dixit: Un juego de cartas con hermosas ilustraciones donde los jugadores deben intentar adivinar la carta seleccionada por el narrador, quien da pistas vagas relacionadas con las imágenes en las cartas. La temática es la de un viaje imaginativo a través de mundos surrealistas.<br>
+                        ☼ Dead of Winter: Un juego de supervivencia en un mundo post-apocalíptico infestado de zombies. Los jugadores colaboran para sobrevivir mientras gestionan recursos, exploran ubicaciones y enfrentan desafíos.<br>
+                        ☼ Pandemic: Un juego cooperativo donde los jugadores asumen el papel de miembros de un equipo de especialistas que intentan detener brotes de enfermedades en todo el mundo. La temática es de lucha contra pandemias y cooperación global.<br>
+                        ☼ Terraforming Mars: Los jugadores representan corporaciones compitiendo por terraformar y colonizar Marte. Deben gestionar recursos, construir infraestructuras y mejorar el medio ambiente para hacer habitable el planeta rojo.<br>
+                    </div>
                     <!-- Icono 4 Juegos de Estrategia -->
-                    <div class="icon" onclick="showTextBox(4)">
+                    <div class="icon"onclick="showTextBox(4)">
                         <div class="icon-frame"></div>
-                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/farsa.png?raw=true" alt="Icono 4">
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/mapa-del-juego.png?raw=true" alt="Icono 4">
                         <div class="icon-text">Juegos de Estrategia</div>
                     </div>
+                    <div id="text-box-4" class="text-box">
+                        ☼ Dominion: Un juego de construcción de mazos donde los jugadores utilizan cartas para adquirir nuevas cartas y construir un mazo más poderoso. El objetivo es obtener la mayor cantidad de puntos de victoria al final del juego.<br>
+                        ☼ 7 Wonders Duel: Una versión para dos jugadores del popular juego de mesa 7 Wonders. Los jugadores compiten por construir una civilización poderosa a lo largo de tres eras, utilizando cartas para construir estructuras, desarrollar tecnologías y acumular puntos de victoria.<br>
+                        ☼ Race for the Galaxy: Un juego de cartas de construcción de imperios espaciales donde los jugadores exploran, colonizan, desarrollan tecnologías y producen bienes para obtener puntos de victoria. La gestión de mano y la optimización de acciones son clave en este juego.<br>
+                        ☼ Magic: The Gathering: Un juego de cartas coleccionables donde los jugadores construyen mazos personalizados y se enfrentan en duelos de magia estratégicos. Cada carta representa un hechizo, criatura o habilidad única que puede ser utilizada para derrotar al oponente.<br>
+                        ☼ Keyforge: Creado por el mismo diseñador de Magic: The Gathering, Richard Garfield, Keyforge es un juego de cartas único en el que cada mazo es único y preconstruido, lo que significa que no hay necesidad de construir tu propio mazo. Los jugadores compiten por forjar claves que les permitan abrir la Fortaleza de su oponente.<br>
+                        ☼ Netrunner: Un juego de cartas asimétrico donde un jugador asume el papel de un hacker (Corredor) y el otro como una mega-corporación (Corporación). Los jugadores compiten por puntos de agenda, mientras que la Corporación intenta proteger sus secretos y el Corredor busca exponerlos.<br>
+                    </div>
                     <!-- Icono 5 Juegos de Aventura -->
-                    <div class="icon" onclick="showTextBox(5)">
+                    <div class="icon"onclick="showTextBox(5)">
                         <div class="icon-frame"></div>
                         <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/juego-de-aventura.png?raw=true" alt="Icono 5">
                         <div class="icon-text">Juegos de Aventura</div>
                     </div>
+                    <div id="text-box-5" class="text-box">
+                        ☼ Arkham Horror: The Card Game: Ambientado en el universo de Lovecraft, los jugadores asumen el papel de investigadores que exploran la ciudad de Arkham y enfrentan horrores sobrenaturales. Utilizan cartas para investigar pistas, luchar contra monstruos y resolver misterios.<br>
+                        ☼ Mice and Mystics: Los jugadores encarnan a valientes ratones que se aventuran en un mundo de fantasía para salvar a su reina de un malvado hechicero. Utilizan cartas para moverse, luchar contra enemigos y resolver desafíos mientras exploran mazmorras y completan misiones.<br>
+                        ☼ Pathfinder Adventure Card Game: Basado en el juego de rol Pathfinder, este juego de cartas permite a los jugadores embarcarse en aventuras épicas donde enfrentan monstruos, encuentran tesoros y completan misiones para mejorar sus personajes y avanzar en la historia.<br>
+                        ☼ Legends of Andor: The Card Game: Una versión de cartas del popular juego de mesa Legends of Andor. Los jugadores colaboran para defender el reino de Andor de las fuerzas del mal, enfrentándose a monstruos, completando misiones y protegiendo la tierra de la destrucción.<br>
+                        ☼ The Crew: The Quest for Planet Nine: Un juego cooperativo donde los jugadores forman parte de una tripulación espacial en busca del misterioso Planeta Nueve. Utilizan cartas para cumplir objetivos específicos mientras superan desafíos y resuelven acertijos en el espacio profundo.<br>
+                    </div>
                     <!-- Icono 6 Juegos de Acertijos -->
                     <div class="icon"onclick="showTextBox(6)">
                         <div class="icon-frame"></div>
-                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/juego-infantil-tradicional.png?raw=true" alt="Icono 6">
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/farsa.png?raw=true" alt="Icono 6">
                         <div class="icon-text">Juegos de Acertijos</div>
                     </div>
+                    <div id="text-box-6" class="text-box">
+                        ☼ Unlock!: Una serie de juegos de escape room en forma de cartas. Los jugadores trabajan juntos para resolver acertijos y desbloquear nuevas cartas que los llevan a través de una historia envolvente mientras intentan escapar de situaciones peligrosas.<br>
+                        ☼ The Game: Un juego cooperativo en el que los jugadores deben trabajar juntos para jugar todas las cartas en su mano en cuatro pilas de juego numeradas en orden ascendente o descendente. Sin embargo, no pueden comunicarse directamente sobre las cartas que tienen en la mano.<br>
+                        ☼ Deckscape: Otra serie de juegos de escape room en forma de cartas. Los jugadores resuelven acertijos y toman decisiones para avanzar en la historia y escapar de situaciones complicadas. Cada juego tiene una historia única y desafíos específicos.<br>
+                        ☼ Chronicles of Crime: Un juego de investigación criminal donde los jugadores resuelven casos utilizando una combinación de cartas de personajes, lugares, objetos y una aplicación de teléfono inteligente que proporciona pistas y permite la interacción con el entorno del juego.<br>
+                        ☼ The Crew: The Quest for Planet Nine (sí, este juego también se puede considerar de acertijos): Los jugadores deben trabajar juntos para cumplir objetivos específicos en el espacio profundo, pero hay un giro: ¡no pueden comunicarse directamente sobre las cartas que tienen en la mano!<br>
+                    </div>
+                        
                     <!-- Icono 7 Juegos Tradicionales -->
-                    <div class="icon" onclick="showTextBox(7)">
+                    <div class="icon"onclick="showTextBox(7)">
                         <div class="icon-frame"></div>
-                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/mapa-del-juego.png?raw=true" alt="Icono 7">
+                        <img src="https://github.com/Menkion/Inacapludi/blob/main/Imagenes/icons/juego-infantil-tradicional.png?raw=true" alt="Icono 7">
                         <div class="icon-text">Juegos Tradicionales</div>
                     </div>
-                    <div id="text-box-1" class="text-box">lg.fhdkjhbnslfbkgjnsrlkbjhnsgdflkjsfgdnblsfgdkjbngsflbkjhsgfnblksjfghbnlsfgjkbhnsfglb</div>
-                    
-            </div>
+                    <div id="text-box-7" class="text-box">
+                        ☼ La Escoba: Un juego de cartas donde el objetivo es recolectar cartas que sumen 15 puntos o formar combinaciones especiales para ganar puntos. Se juega con una baraja española y es popular en Chile y otros países de habla hispana.<br>
+                        ☼ El Truco Chileno: Una versión del juego de truco adaptada a las preferencias y reglas locales en Chile. Se juega con una baraja española y tiene algunas diferencias en las reglas con respecto a otras versiones del juego en América Latina.<br>
+                        ☼ Chinchón Chileno: Similar al juego de Chinchón común en otros países, esta versión adaptada incluye algunas variaciones en las reglas y en la forma en que se juega. El objetivo sigue siendo formar combinaciones de cartas para quedarse sin cartas en la mano.<br>
+                        ☼ La Conquian: Aunque no es exclusivo de Chile, La Conquian es un juego de cartas muy popular en el país. Se juega con una baraja española y el objetivo es formar combinaciones de cartas para ganar puntos y ser el primero en quedarse sin cartas en la mano.<br>
+                    </div>
+                <div class="texto4">Para más información o unirte a nuestro Club InacapLudi dejanos tus datos:</div>
     <div id="form">
         <form id="call2action" onsubmit="return sendForm(this);">
             <div>
